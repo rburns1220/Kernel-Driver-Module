@@ -109,7 +109,7 @@ static int release(struct inode* inode, struct file* file)
 static ssize_t read(struct file* file, char* outputBuffer, size_t size, loff_t* loff)
 {
 	int charactersRead = 0;
-	printk(KERN_INFO "Chardev: Reading from device (%d bytes\n", size);
+	printk(KERN_INFO "Chardev: Reading from device (%d bytes)\n", size);
 	
 	/*
 		While there is room in the output buffer and while there exists entries to be read, we read. 
@@ -135,7 +135,7 @@ static ssize_t write(struct file* file, const char* input, size_t len, loff_t* l
 {
 	int charactersRead = 0;
 	int i;
-	printk(KERN_INFO "Chardev: Writing to device (%d bytes\n", len);
+	printk(KERN_INFO "Chardev: Writing to device (%d bytes)\n", len);
 	
 	/*
 		While theres is more to write and the buffer is not full, write to the buffer.
